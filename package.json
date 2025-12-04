@@ -1,0 +1,22 @@
+{
+  "name": "demo-biome",
+  "version": "1.0.0",
+  "description": "A demo project showcasing Biome - the fast formatter and linter",
+  "main": "index.js",
+  "scripts": {
+    "check": "biome check ./src",
+    "check:fix": "biome check --write ./src",
+    "format": "biome format ./src",
+    "format:fix": "biome format --write ./src",
+    "lint": "biome lint ./src",
+    "lint:fix": "biome lint --write ./src",
+    "ci": "biome ci ./src"
+  },
+  "keywords": ["biome", "linter", "formatter", "demo"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.8"
+  }
+}
