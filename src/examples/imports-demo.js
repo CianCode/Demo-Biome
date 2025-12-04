@@ -34,13 +34,13 @@ import * as utils from '../utils';
 // The component using these imports
 function ImportDemo() {
     const [data, setData] = useState(null);
-    
+
     useEffect(() => {
         // Using various imports
         const url = API_URL + '/users';
         console.log(url);
     }, []);
-    
+
     return React.createElement('div', null, 'Import Demo');
 }
 

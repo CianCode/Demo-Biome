@@ -18,23 +18,23 @@ return value
 // Class with formatting issues
 class   UserService{
     private users:User[]=[]
-    
+
     constructor(){
         this.users=[]
     }
-    
+
     addUser(user:User):void{
         this.users.push(user)
     }
-    
+
     getUser(id:number):User|undefined{
         return this.users.find(u=>u.id===id)
     }
-    
+
     getAllUsers():User[]{
         return this.users
     }
-    
+
     // Unused private method (lint issue)
     private unusedMethod():void{
         console.log("I'm never called")

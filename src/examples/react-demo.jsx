@@ -7,20 +7,20 @@ import React,{useState,useEffect} from 'react'
 function   UserCard({user,onDelete,onEdit}){
     const[isEditing,setIsEditing]=useState(false)
     const[name,setName]=useState(user.name)
-    
+
     // Missing dependency in useEffect (lint issue)
     useEffect(()=>{
         console.log("User changed:",user.name)
     },[])
-    
+
     const handleSave=()=>{
         onEdit({...user,name})
         setIsEditing(false)
     }
-    
+
     // Inline styles (works but shows formatting)
     const cardStyle={padding:'20px',margin:'10px',border:'1px solid #ccc',borderRadius:'8px'}
-    
+
     return(
         <div style={cardStyle}>
             {isEditing?(
@@ -53,15 +53,15 @@ function   UserList(){
         {id:2,name:'Bob',email:'bob@example.com',age:30},
         {id:3,name:'Charlie',email:'charlie@example.com'}
     ])
-    
+
     const handleDelete=(id)=>{
         setUsers(users.filter(u=>u.id!==id))
     }
-    
+
     const handleEdit=(updatedUser)=>{
         setUsers(users.map(u=>u.id===updatedUser.id?updatedUser:u))
     }
-    
+
     return(
         <div>
             <h1>User List</h1>
